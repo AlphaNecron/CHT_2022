@@ -13,13 +13,13 @@ int main() {
         if (z < x && z > 0) tx++;
     }
     for (i = 0; i < q; i++) {
-        long l, r, ctx = tx;
+        long l, r, ctx = 0;
         cin >> l >> r;
         for (j = 0; j < l-1; j++)
-            if (a[j] < x && a[j] > 0) ctx--;
+            if (a[j] < x && a[j] > 0) ctx++;
         for (j = r; j < n; j++)
-            if (a[j] < x && a[j] > 0) ctx--;
-        cout << ctx << endl;
+            if (a[j] < x && a[j] > 0) ctx++;
+        cout << tx-ctx << endl;
     }
     return 0;
 }
